@@ -19,8 +19,10 @@ public class ShortenUrl {
     public ShortenUrl(String originalUrl, String shortenUrlKey) {
         this.originalUrl = originalUrl;
         this.shortenedUrlKey = shortenUrlKey;
-
+        this.redirectCount = 0L;
     }
+
+
 
     public static String generateSnortenedUrlKey() {
         String base56Characters = "23456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnpqrstuvwxyz";
@@ -35,5 +37,21 @@ public class ShortenUrl {
 
     public String getShortenUrlKey() {
         return shortenedUrlKey;
+    }
+
+    public String getOriginalUrl() {
+        return originalUrl;
+    }
+
+    public Long getRedirectCount() {
+        return redirectCount;
+    }
+
+    public void setRedirectCount(long l) {
+        this.redirectCount = l;
+    }
+
+    public void increaseRedirectCount() {
+        this.redirectCount++;
     }
 }

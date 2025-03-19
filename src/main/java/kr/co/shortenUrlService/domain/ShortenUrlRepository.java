@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 public interface ShortenUrlRepository {
     void saveShortenUrl(ShortenUrl shortenUrl);
 
-    ShortenUrlInformationDto findShortenUrlByShortenUrlKey(String shortenUrlKey);
+    ShortenUrl findShortenUrlByShortenUrlKey(String shortenUrlKey);
 }
